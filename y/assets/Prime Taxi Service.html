@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://127.0.0.1:5500/Prime%20taxi%20service.html? -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Taxi Service</title>
+    <link href="./Prime Taxi Service_files/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Prime Taxi Service_files/style.css">
+  <style>@font-face {
+              font-family: 'Open Sans Regular';
+              font-style: normal;
+              font-weight: 400;
+              src: url('chrome-extension://djbbokpfbbipcdnodgadkidppckgajgp/fonts/open_sans/open-sans-v18-latin-regular.woff');
+          }</style><style>@font-face {
+              font-family: 'Open Sans Bold';
+              font-style: normal;
+              font-weight: 800;
+              src: url('chrome-extension://djbbokpfbbipcdnodgadkidppckgajgp/fonts/open_sans/OpenSans-Bold.woff');
+          }</style><style>@font-face {
+              font-family: 'Open Sans ExtraBold';
+              font-style: normal;
+              font-weight: 800;
+              src: url('chrome-extension://djbbokpfbbipcdnodgadkidppckgajgp/fonts/open_sans/open-sans-v18-latin-800.woff');
+          }</style></head>
+  <body class="font-sans">
+    <!-- Top Header -->
+    <div class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 py-2">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+          <div class="flex space-x-6">
+            <span class="flex items-center hover:text-white transition duration-300">
+              📱 +91 9809016464
+            </span>
+            <span class="flex items-center hover:text-white transition duration-300">
+              📧 info@primetaxi.com
+            </span>
+          </div>
+          <!-- Booking Button (Hidden on Mobile) -->
+          <a href="http://127.0.0.1:5500/Prime%20taxi%20service.html?#booking" class="bg-gray-900 text-white px-8 py-2 rounded-full text-sm hover:bg-gray-800 transition duration-300 button-glow items-center hidden md:flex">
+            <span>Book a Taxi</span>
+          </a>
+        </div>
+      </div>
+      
+      
+
+    <!-- Navigation -->
+    <nav class="glass-effect sticky top-0 z-50 py-4 bg-white shadow-md">
+      <div class="container mx-auto px-4 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="http://127.0.0.1:5500/Prime%20taxi%20service.html?#home" class="text-3xl font-bold text-yellow-400 text-glow">Prime Taxi</a>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden focus:outline-none">
+          <svg class="w-8 h-8 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex space-x-8">
+          <a href="http://127.0.0.1:5500/Prime%20taxi%20service.html?#home" class="nav-link">Home</a>
+          <a href="http://127.0.0.1:5500/Prime%20taxi%20service.html?#about" class="nav-link">About</a>
+          <a href="http://127.0.0.1:5500/Prime%20taxi%20service.html?#services" class="nav-link">Services</a>
+          <a href="http://127.0.0.1:5500/Prime%20taxi%20service.html?#booking" class="nav-link">Book Now</a>
+          <a href="http://127.0.0.1:5500/Prime%20taxi%20service.html?#gallery" class="nav-link">Gallery</a>
+          <a href="http://127.0.0.1:5500/Prime%20taxi%20service.html?#testimonials" class="nav-link">Testimonials</a>
+          <a href="http://127.0.0.1:5500/Prime%20taxi%20service.html?#contact" class="nav-link">Contact</a>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Drawer -->
+      <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 hidden">
+        <div class="bg-white w-3/5 h-full shadow-lg p-6 fixed top-0 right-0 transform translate-x-full transition-transform duration-300">
+          <button id="close-menu" class="text-gray-700 mb-6 focus:outline-none">
+            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+          <nav class="flex flex-col space-y-2">
+            <a href="http://127.0.0.1:5500/Prime%20taxi%20service.html?#home" class="nav-link block bg-white text-gray-800 px-4 py-3 rounded-md shadow-sm">Home</a>
+            <a href="http://127.0.0.1:5500/Prime%20taxi%20service.html?#about" class="nav-link block bg-white text-gray-800 px-4 py-3 rounded-md shadow-sm">About</a>
+            <a href="http://127.0.0.1:5500/Prime%20taxi%20service.html?#services" class="nav-link block bg-white text-gray-800 px-4 py-3 rounded-md shadow-sm">Services</a>
+            <a href="http://127.0.0.1:5500/Prime%20taxi%20service.html?#booking" class="nav-link block bg-white text-gray-800 px-4 py-3 rounded-md shadow-sm">Book Now</a>
+            <a href="http://127.0.0.1:5500/Prime%20taxi%20service.html?#gallery" class="nav-link block bg-white text-gray-800 px-4 py-3 rounded-md shadow-sm">Gallery</a>
+            <a href="http://127.0.0.1:5500/Prime%20taxi%20service.html?#testimonials" class="nav-link block bg-white text-gray-800 px-4 py-3 rounded-md shadow-sm">Testimonials</a>
+            <a href="http://127.0.0.1:5500/Prime%20taxi%20service.html?#contact" class="nav-link block bg-white text-gray-800 px-4 py-3 rounded-md shadow-sm">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-cover bg-center bg-no-repeat text-white min-h-screen flex items-center" style="background-image: url(&#39;assets/home.webp&#39;)">
+      <div class="container mx-auto px-4 bg-black bg-opacity-20 py-16">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="z-10">
+            <h1 class="text-6xl font-bold mb-6 text-glow">
+              Future of <span class="text-yellow-400">Urban Transit</span>
+            </h1>
+            <p class="text-xl mb-8 text-gray-300">
+              Experience the next generation of transportation with Prime Taxi.
+              Smart, sustainable, and always at your service.
+            </p>
+            <div class="flex space-x-4">
+              <a href="http://127.0.0.1:5500/Prime%20taxi%20service.html?#booking" class="bg-yellow-400 text-gray-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition duration-300 button-glow">Book Now</a>
+              <a href="http://127.0.0.1:5500/Prime%20taxi%20service.html?#services" class="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-bold hover:bg-yellow-400 hover:text-gray-900 transition duration-300">Our Services</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+          <div class="relative">
+            <img src="./Prime Taxi Service_files/aboutus.webp" alt="About Us" class="rounded-2xl shadow-2xl hover-scale">
+            <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl">
+              <div class="text-4xl font-bold text-yellow-400">15+</div>
+              <div class="text-gray-600">Years Experience</div>
+            </div>
+          </div>
+          <div>
+            <h2 class="text-4xl font-bold mb-6">
+              Revolutionizing Your <span class="text-yellow-400">Journey</span>
+            </h2>
+            <p class="text-lg mb-8 text-gray-600">
+              Pioneering the future of urban mobility with cutting-edge
+              technology and unparalleled service excellence.
+            </p>
+            <div class="space-y-6">
+              <div class="glass-effect p-6 rounded-xl hover-scale bg-white">
+                <div class="flex items-start space-x-4">
+                  <div class="bg-yellow-400 p-3 rounded-xl">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-xl">Elite Drivers</h3>
+                    <p class="text-gray-600">
+                      Professionally trained experts with perfect safety
+                      records.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="glass-effect p-6 rounded-xl hover-scale bg-white">
+                <div class="flex items-start space-x-4">
+                  <div class="bg-yellow-400 p-3 rounded-xl">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-xl">Always Available</h3>
+                    <p class="text-gray-600">
+                      24/7 service with real-time tracking and support.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="glass-effect p-6 rounded-xl hover-scale bg-white">
+                <div class="flex items-start space-x-4">
+                  <div class="bg-yellow-400 p-3 rounded-xl">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-xl">Smart Pricing</h3>
+                    <p class="text-gray-600">
+                      Transparent, competitive rates with no hidden fees.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 gradient-bg text-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-4">
+          Our Premium Services
+        </h2>
+        <p class="text-xl text-center mb-12 text-gray-300">
+          Exceptional service tailored to your needs
+        </p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="glass-effect p-6 rounded-2xl service-card">
+            <img src="./Prime Taxi Service_files/tt.jpg" alt="Airport Transfer" class="w-full rounded-xl gallery-img mb-6">
+            <h3 class="text-2xl font-bold mb-4 text-yellow-400">
+              Airport Transfers
+            </h3>
+            <p class="text-gray-300">
+              Seamless airport transportation with flight tracking and meet &amp;
+              greet service.
+            </p>
+            <ul class="mt-4 space-y-2">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-yellow-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Flight Monitoring
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-yellow-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Meet &amp; Greet
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-yellow-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Luggage Assistance
+              </li>
+            </ul>
+          </div>
+          <div class="glass-effect p-6 rounded-2xl service-card">
+            <img src="./Prime Taxi Service_files/citytour.webp" alt="City Tours" class="w-full gallery-img rounded-xl mb-6">
+            <h3 class="text-2xl font-bold mb-4 text-yellow-400">City Tours</h3>
+            <p class="text-gray-300">
+              Discover the city with our expert guides and customized tour
+              packages.
+            </p>
+            <ul class="mt-4 space-y-2">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-yellow-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Custom Routes
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-yellow-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Expert Guides
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-yellow-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Flexible Duration
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Booking Section -->
+    <section id="booking" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-12">Book Your Ride</h2>
+          <div class="max-w-2xl mx-auto">
+            <form class="space-y-6">
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block mb-2">Pickup Location</label>
+                  <input type="text" class="w-full p-3 border rounded-lg" placeholder="Enter pickup address">
+                </div>
+                <div>
+                  <label class="block mb-2">Drop-off Location</label>
+                  <input type="text" class="w-full p-3 border rounded-lg" placeholder="Enter destination">
+                </div>
+              </div>
+                    <!-- Vehicle Selection Dropdown -->
+                    <div>
+                        <label class="block mb-2">Select Vehicle</label>
+                        <select class="w-full p-3 border rounded-lg">
+                          <option value="" disabled="" selected="">Select a vehicle</option>
+                          <option value="sedan">Sedan</option>
+                          <option value="suv">SUV</option>
+                          <option value="hatchback">Hatchback</option>
+                          <option value="luxury">Luxury Car</option>
+                          <option value="van">Van</option>
+                        </select>
+                      </div>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block mb-2">Date</label>
+                  <input type="date" class="w-full p-3 border rounded-lg">
+                </div>
+                <div>
+                  <label class="block mb-2">Time</label>
+                  <input type="time" class="w-full p-3 border rounded-lg">
+                </div>
+              </div>
+        
+              <button type="submit" class="w-full bg-yellow-400 text-gray-900 py-3 rounded-lg font-bold hover:bg-yellow-300 transition duration-300">
+                Book Now
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Our Fleet</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <img src="./Prime Taxi Service_files/ciaz.webp" alt="Taxi 1" class="w-full gallery-img rounded-lg shadow-lg">
+          <img src="./Prime Taxi Service_files/Ertiga.webp" alt="Taxi 2" class="w-full gallery-img rounded-lg shadow-lg">
+          <img src="./Prime Taxi Service_files/Etios.webp" alt="Taxi 3" class="w-full gallery-img rounded-lg shadow-lg">
+          <img src="./Prime Taxi Service_files/innova.webp" alt="Taxi 4" class="w-full gallery-img rounded-lg shadow-lg">
+          <img src="./Prime Taxi Service_files/SwiftDzire.png" alt="Taxi 5" class="w-full gallery-img rounded-lg shadow-lg">
+          <img src="./Prime Taxi Service_files/traveller.webp" alt="Taxi 6" class="w-full gallery-img rounded-lg shadow-lg">
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">
+          What Our Customers Say
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-gray-100 p-6 rounded-lg">
+            <p class="mb-4">
+              "Excellent service! The driver was professional and punctual. Will
+              definitely use again."
+            </p>
+            <div class="font-bold">- John Smith</div>
+          </div>
+          <div class="bg-gray-100 p-6 rounded-lg">
+            <p class="mb-4">
+              "Best taxi service in town. Clean vehicles and courteous drivers."
+            </p>
+            <div class="font-bold">- Sarah Johnson</div>
+          </div>
+          <div class="bg-gray-100 p-6 rounded-lg">
+            <p class="mb-4">
+              "Reliable and comfortable. My go-to choice for airport transfers."
+            </p>
+            <div class="font-bold">- Michael Brown</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Contact Us</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Get in Touch</h3>
+            <p class="mb-4">Have questions? We're here to help 24/7.</p>
+            <div class="space-y-4">
+              <p>📱 Phone: (555) 123-4567</p>
+              <p>📧 Email: info@primetaxi.com</p>
+              <p>📍 Address: 123 Main Street, City, State 12345</p>
+            </div>
+          </div>
+          <div>
+            <form class="space-y-4">
+              <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg text-gray-900">
+              <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg text-gray-900">
+              <textarea placeholder="Your Message" rows="4" class="w-full p-3 rounded-lg text-gray-900"></textarea>
+              <button type="submit" class="bg-yellow-400 text-gray-900 px-8 py-3 rounded-lg font-bold hover:bg-yellow-300 transition duration-300">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-4 text-center">
+        <p>© 2025 Prime Taxi Service. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+    <script src="./Prime Taxi Service_files/javascript.js"></script>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
