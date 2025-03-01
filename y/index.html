@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prime Taxi Service</title>
+    <title>Anu Tours and Travels</title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
       rel="stylesheet"
@@ -19,15 +19,17 @@
       <div class="container mx-auto px-4 flex justify-between items-center">
         <div class="flex space-x-6">
           <span
-            class="flex items-center hover:text-white transition duration-300"
-          >
-            📱 +91 9809016464
-          </span>
-          <span
-            class="flex items-center hover:text-white transition duration-300"
-          >
-            📧 info@primetaxi.com
-          </span>
+          class="flex items-center hover:text-white transition duration-300"
+        >
+          📱 <a href="tel:+919809016464" class="hover:underline">+91 9809016464</a>
+        </span>
+        <span
+          class="flex items-center hover:text-white transition duration-300"
+        >
+          📧 <a href="mailto:senthilkumarpkd09@gmail.com" class="hover:underline">
+            senthilkumarpkd09@gmail.com
+          </a>
+        </span>
         </div>
         <!-- Booking Button (Hidden on Mobile) -->
         <a
@@ -44,7 +46,7 @@
       <div class="container mx-auto px-4 flex justify-between items-center">
         <!-- Logo -->
         <a href="#home" class="text-3xl font-bold text-yellow-400 text-glow"
-          >Prime Taxi</a
+          >Anu Tours and Travels</a
         >
 
         <!-- Mobile Menu Button -->
@@ -152,8 +154,8 @@
               Future of <span class="text-yellow-400">Urban Transit</span>
             </h1>
             <p class="text-xl mb-8 text-gray-300">
-              Experience the next generation of transportation with Prime Taxi.
-              Smart, sustainable, and always at your service.
+              Experience the next generation of transportation with Anu Tours
+              and Travels. Smart, sustainable, and always at your service.
             </p>
             <div class="flex space-x-4">
               <a
@@ -448,28 +450,40 @@
                 />
               </div>
             </div>
-    
+
             <div>
               <label class="block mb-2">Select Vehicle</label>
               <select id="vehicle" class="w-full p-3 border rounded-lg">
-                <option value="Sedan">Sedan</option>
-                <option value="SUV">SUV</option>
-                <option value="Luxury Car">Luxury Car</option>
-                <option value="Mini Bus">Mini Bus</option>
+                <option value="Ciaz">Ciaz</option>
+                <option value="Ertiga">Ertiga</option>
+                <option value="Etios">Etios</option>
+                <option value="Innova">Innova</option>
+                <option value="DZire">DZire</option>
+                <option value="Traveler">Traveler</option>
               </select>
             </div>
-    
+
             <div class="grid md:grid-cols-2 gap-6">
               <div>
                 <label class="block mb-2">Date</label>
-                <input type="date" id="date" class="w-full p-3 border rounded-lg" required />
+                <input
+                  type="date"
+                  id="date"
+                  class="w-full p-3 border rounded-lg"
+                  required
+                />
               </div>
               <div>
                 <label class="block mb-2">Time</label>
-                <input type="time" id="time" class="w-full p-3 border rounded-lg" required />
+                <input
+                  type="time"
+                  id="time"
+                  class="w-full p-3 border rounded-lg"
+                  required
+                />
               </div>
             </div>
-    
+
             <button
               type="submit"
               class="w-full bg-yellow-400 text-gray-900 py-3 rounded-lg font-bold hover:bg-yellow-300 transition duration-300"
@@ -480,7 +494,6 @@
         </div>
       </div>
     </section>
-    
 
     <!-- Gallery Section -->
     <section id="gallery" class="py-20 bg-gray-100">
@@ -503,7 +516,7 @@
             class="w-full gallery-img rounded-lg shadow-lg"
           />
           <img
-            src="/assets/innova.webp"
+            src="/assets/innova.png"
             alt="Taxi 4"
             class="w-full gallery-img rounded-lg shadow-lg"
           />
@@ -513,7 +526,7 @@
             class="w-full gallery-img rounded-lg shadow-lg"
           />
           <img
-            src="/assets/traveller.webp"
+            src="/assets/traveler.png"
             alt="Taxi 6"
             class="w-full gallery-img rounded-lg shadow-lg"
           />
@@ -560,30 +573,39 @@
             <h3 class="text-2xl font-bold mb-4">Get in Touch</h3>
             <p class="mb-4">Have questions? We're here to help 24/7.</p>
             <div class="space-y-4">
-              <p>📱 Phone: (555) 123-4567</p>
-              <p>📧 Email: info@primetaxi.com</p>
-              <p>📍 Address: 123 Main Street, City, State 12345</p>
+              
+              <p>📱 <a href="tel:+919809016464" class="hover:underline">+91 9809016464</a></p>
+              <p>📱 <a href="tel:+919539016464" class="hover:underline">+91 9539016464</a></p>
+              <p>📧 Email: senthilkumarpkd09@gmail.com</p>
+              <p>📍 Address: Opp. Head post office, Palakkad, Kerala</p>
             </div>
           </div>
           <div>
-            <form class="space-y-4">
+            <form class="space-y-4" id="contactForm">
               <input
                 type="text"
+                id="name"
                 placeholder="Your Name"
                 class="w-full p-3 rounded-lg text-gray-900"
+                required
               />
               <input
-                type="email"
-                placeholder="Your Email"
+                type="tel"
+                id="mobile"
+                placeholder="Your Mobile Number"
                 class="w-full p-3 rounded-lg text-gray-900"
+                required
               />
               <textarea
+                id="message"
                 placeholder="Your Message"
                 rows="4"
                 class="w-full p-3 rounded-lg text-gray-900"
+                required
               ></textarea>
               <button
-                type="submit"
+                type="button"
+                id="sendButton"
                 class="bg-yellow-400 text-gray-900 px-8 py-3 rounded-lg font-bold hover:bg-yellow-300 transition duration-300"
               >
                 Send Message
@@ -597,7 +619,7 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
       <div class="container mx-auto px-4 text-center">
-        <p>&copy; 2025 Prime Taxi Service. All rights reserved.</p>
+        <p>&copy; 2025 Anu Tours and Travels. All rights reserved.</p>
       </div>
     </footer>
 
